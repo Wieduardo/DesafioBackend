@@ -51,30 +51,6 @@ class CNABdocSerializer(serializers.ModelSerializer):
 
         return CNAB_file_object
 
-    def abre_aquivo():
-
-        conteudo = open("CNAB.txt", 'r', encoding="utf-8")
-
-        conteudo_formatado = conteudo.read()
-        # print(type(conteudo_formatado))
-        x = conteudo_formatado.split()
-
-        parts = [conteudo_formatado[i:i+80] for i in range(0, len(conteudo_formatado), 81)]
-
-        for part in parts:
-            part1=part[0:1]
-            part2=part[1:9]
-            part3=part[9:19]
-            part4=part[19:30]
-            part5=part[30:42]
-            part6=part[42:48]
-            part7=part[48:62]
-            part8=part[62:81]
-
-            print(f'Tipo={part1} Data={part2} Valor={part3} CPF={part4} Cartão={part5} Hora={part6} Dono={part7} Loja={part8}')
-
-        conteudo.close()
-
 class CNABentriesSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -90,8 +66,8 @@ class CNABentriesSerializer(serializers.ModelSerializer):
             "card",
             "hour",
             "owner",
-            "store",
-            "cnab_doc"
+            "store"
         ]
 
         ready_only_fields = ["id"]
+

@@ -15,4 +15,3 @@ class CNABdoc(models.Model):
     hour= models.TimeField()
     owner= models.CharField(max_length=50)
     store= models.CharField(max_length=50)
-    cnab_doc= models.FileField(blank= True, null= True)
