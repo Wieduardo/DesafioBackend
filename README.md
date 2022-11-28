@@ -1,3 +1,5 @@
+Projeto deselvolvido usando django rest framewok.
+
 Essa Aplicação trabalha com o upload de um arquivo CNAB.txt que ficara salvo em um diretório criado de forma automatica. O arquivo é então aberto, lido, e suas informações são salvas no banco de dados.
 
 O arquivo deve ser enviado em POST de formato "Multipart form" com a chave de nome "cnab_doc" na URL "localhost:8000/api/cnab/".
